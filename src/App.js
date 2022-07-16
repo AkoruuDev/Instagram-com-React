@@ -1,15 +1,13 @@
 import Topo from './Topo';
-import Stories from './Stories';
-import Posts from './Posts';
-import Sidebar from './Sidebar';
+import Content from './Content';
+import Base from './Base';
 
 function App() {
     return (
         <div class="banker">
             <Topo />
-            <Stories />
-            <Posts />
-            <Sidebar />
+            <Content />
+            <Base />
         </div>
     )
 }
