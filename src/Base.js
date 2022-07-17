@@ -1,11 +1,15 @@
+function IonIcon(props) {
+    return(<ion-icon name={props.name}></ion-icon>)
+}
+
 function Base() {
     return (
         <div class="fundo-mobile">
-            <ion-icon name="home"></ion-icon>
-            <ion-icon name="search-outline"></ion-icon>
-            <ion-icon name="add-circle-outline"></ion-icon>
-            <ion-icon name="heart-outline"></ion-icon>
-            <ion-icon name="person-outline"></ion-icon>
+            <IonIcon name="home" />
+            <IonIcon name="search-outline" />
+            <IonIcon name="add-circle-outline" />
+            <IonIcon name="heart-outline" />
+            <IonIcon name="person-outline" />
         </div>
     )
 }

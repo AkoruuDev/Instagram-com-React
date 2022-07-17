@@ -1,15 +1,21 @@
+function IonIcon(props) {
+    return (
+        <ion-icon name={props.name} />
+    )
+}
+
 function Topo() {
     return(
         <div class="navbar">
         <div class="container">
           <div class="logo">
-            <ion-icon name="logo-instagram"></ion-icon>
+            <IonIcon name="logo-instagram" />
             <div class="separador"></div>
             <img src="assets/img/logo.png" />
           </div>
 
           <div class="logo-mobile">
-            <ion-icon name="logo-instagram"></ion-icon>
+            <IonIcon name="logo-instagram" />
           </div>
 
           <div class="instagram-mobile">
@@ -21,14 +27,14 @@ function Topo() {
           </div>
   
           <div class="icones">
-            <ion-icon name="paper-plane-outline"></ion-icon>
-            <ion-icon name="compass-outline"></ion-icon>
-            <ion-icon name="heart-outline"></ion-icon>
-            <ion-icon name="person-outline"></ion-icon>
+            <IonIcon name="paper-plane-outline" />
+            <IonIcon name="compass-outline" />
+            <IonIcon name="heart-outline" />
+            <IonIcon name="person-outline" />
           </div>
 
           <div class="icones-mobile">
-            <ion-icon name="paper-plane-outline"></ion-icon>
+            <IonIcon name="paper-plane-outline" />
           </div>
         </div>
       </div>
