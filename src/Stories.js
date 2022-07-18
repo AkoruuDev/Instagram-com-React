@@ -1,27 +1,27 @@
-function Storie(props) {
-  return (
-    <div class="story">
-      <div class="imagem">
-        <img src={props.image} />
-      </div>
-      <div class="usuario">
-        {props.user}
-      </div>
-    </div>
-  )
-}
+const storiesList = [
+  {image: "assets/img/9gag.svg", user:"9gag"},
+  {image: "assets/img/meowed.svg", user:"meowed"},
+  {image: "assets/img/barked.svg", user:"barked"},
+  {image: "assets/img/nathanwpylestrangeplanet.svg", user:"nathanwpylestrangeplanet"},
+  {image: "assets/img/wawawicomics.svg", user:"wawawicomics"},
+  {image: "assets/img/respondeai.svg", user:"respondeai"},
+  {image: "assets/img/filomoderna.svg", user:"filomoderna"},
+  {image: "assets/img/memeriagourmet.svg", user:"memeriagourmet"}
+];
 
 function Stories() {
     return(
       <div class="stories">
-        <Storie image="assets/img/9gag.svg" user='9gag' />
-        <Storie image="assets/img/meowed.svg" user='meowed' />
-        <Storie image="assets/img/barked.svg" user='barked' />
-        <Storie image="assets/img/nathanwpylestrangeplanet.svg" user='nathanwpylestrangeplanet' />
-        <Storie image="assets/img/wawawicomics.svg" user='wawawicomics' />
-        <Storie image="assets/img/respondeai.svg" user='respondeai' />
-        <Storie image="assets/img/filomoderna.svg" user='filomoderna' />
-        <Storie image="assets/img/memeriagourmet.svg" user='memeriagourmet' />
+        {storiesList.map((storie) => (
+          <div class="story">
+            <div class="imagem">
+              <img src={storie.image} />
+            </div>
+            <div class="usuario">
+              {storie.user}
+            </div>
+          </div>
+        ))}
 
         <div class="setinha">
           <ion-icon name="chevron-forward-circle"></ion-icon>

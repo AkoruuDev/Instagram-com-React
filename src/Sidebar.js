@@ -1,18 +1,10 @@
-function Sugestao(props) {
-  return (
-    <div class="sugestao">
-      <div class="usuario">
-        <img src={props.image} />
-        <div class="texto">
-          <div class="nome">{props.name}</div>
-          <div class="razao">Segue você</div>
-        </div>
-      </div>
-
-      <div class="seguir">Seguir</div>
-    </div>
-  )
-}
+const sugestoes = [
+  {image: "assets/img/bad.vibes.memes.svg", name: "bad.vibes.memes"},
+  {image: "assets/img/chibirdart.svg", name: "chibirdart"},
+  {image: "assets/img/razoesparaacreditar.svg", name: "razoesparaacreditar"},
+  {image: "assets/img/adorable_animals.svg", name: "adorable_animals"},
+  {image: "assets/img/smallcutecats.svg", name: "smallcutecats"}
+]
 
 function User(props) {
   return (
@@ -37,11 +29,19 @@ function Sidebar() {
             <div>Ver tudo</div>
           </div>
 
-          <Sugestao image="assets/img/bad.vibes.memes.svg" name="bad.vibes.memes" />
-          <Sugestao image="assets/img/chibirdart.svg" name="chibirdart" />
-          <Sugestao image="assets/img/razoesparaacreditar.svg" name="razoesparaacreditar" />
-          <Sugestao image="assets/img/adorable_animals.svg" name="adorable_animals" />
-          <Sugestao image="assets/img/smallcutecats.svg" name="smallcutecats" />
+          {sugestoes.map(sugestao => (
+            <div class="sugestao">
+              <div class="usuario">
+                <img src={sugestao.image} />
+                <div class="texto">
+                  <div class="nome">{sugestao.name}</div>
+                  <div class="razao">Segue você</div>
+                </div>
+              </div>
+
+              <div class="seguir">Seguir</div>
+            </div>
+          ))}
         </div>
 
         <div class="links">
