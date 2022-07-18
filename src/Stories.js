@@ -11,19 +11,19 @@ const storiesList = [
 
 function Stories() {
     return(
-      <div class="stories">
+      <div className="stories">
         {storiesList.map((storie) => (
-          <div class="story">
-            <div class="imagem">
+          <div className="story">
+            <div className="imagem">
               <img src={storie.image} />
             </div>
-            <div class="usuario">
+            <div className="usuario">
               {storie.user}
             </div>
           </div>
         ))}
 
-        <div class="setinha">
+        <div className="setinha">
           <ion-icon name="chevron-forward-circle"></ion-icon>
         </div>
       </div>       

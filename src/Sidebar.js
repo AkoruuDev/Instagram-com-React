@@ -8,9 +8,9 @@ const sugestoes = [
 
 function User(props) {
   return (
-    <div class="usuario">
+    <div className="usuario">
       <img src={props.image} />
-      <div class="texto">
+      <div className="texto">
         <strong>{props.nick}</strong>
         {props.name}
       </div>
@@ -20,35 +20,35 @@ function User(props) {
 
 function Sidebar() {
     return(
-      <div class="sidebar">
+      <div className="sidebar">
         <User image="assets/img/catanacomics.svg" nick="catanacomics" name="Catana"/>
 
-        <div class="sugestoes">
-          <div class="titulo">
+        <div className="sugestoes">
+          <div className="titulo">
             Sugestões para você
             <div>Ver tudo</div>
           </div>
 
           {sugestoes.map(sugestao => (
-            <div class="sugestao">
-              <div class="usuario">
+            <div className="sugestao">
+              <div className="usuario">
                 <img src={sugestao.image} />
-                <div class="texto">
-                  <div class="nome">{sugestao.name}</div>
-                  <div class="razao">Segue você</div>
+                <div className="texto">
+                  <div className="nome">{sugestao.name}</div>
+                  <div className="razao">Segue você</div>
                 </div>
               </div>
 
-              <div class="seguir">Seguir</div>
+              <div className="seguir">Seguir</div>
             </div>
           ))}
         </div>
 
-        <div class="links">
+        <div className="links">
           Sobre • Ajuda • Imprensa • API • Carreiras • Privacidade • Termos • Localizações • Contas mais relevantes • Hashtags • Idioma
         </div>
 
-        <div class="copyright">
+        <div className="copyright">
           © 2021 INSTAGRAM DO FACEBOOK
         </div>
       </div>

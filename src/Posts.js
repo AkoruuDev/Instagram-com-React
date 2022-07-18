@@ -1,3 +1,5 @@
+import React from 'react'
+
 const posts = [
   {
     imagePerfil: "assets/img/meowed.svg",
@@ -17,48 +19,60 @@ const posts = [
   }
 ]
 
-
 function Posts() {
-    return(
-      <div class="posts">
-        {posts.map(post => (
-          <div class="post">
-            <div class="topo">
-              <div class="usuario">
-                <img src={post.imagePerfil} />
-                {post.name}
-              </div>
-              <div class="acoes">
-                <ion-icon name="ellipsis-horizontal"></ion-icon>
-              </div>
-            </div>
+  const [fill, setFill] = React.useState("heart-outline");
+  const refer = React.useRef()
 
-            <div class="conteudo">
-              <img src={post.post} />
-            </div>
+  function putFill(element) {
+    if (fill === "heart-outline") {
+      setFill("heart")
+    } else {
+      setFill("heart-outline")
+    }
+  }
 
-            <div class="fundo">
-              <div class="acoes">
-                <div>
-                  <ion-icon name="heart-outline"></ion-icon>
-                  <ion-icon name="chatbubble-outline"></ion-icon>
-                  <ion-icon name="paper-plane-outline"></ion-icon>
-                </div>
-                <div>
-                  <ion-icon name="bookmark-outline"></ion-icon>
-                </div>
-              </div>
-
-              <div class="curtidas">
-                <img src={post.perfilReacted} />
-                <div class="texto">
-                  Curtido por <strong>{post.perfilReactedName}</strong> e <strong>outras {post.reactionsNumber} pessoas</strong>
-                </div>
-              </div>
-            </div>
-          </div>
-        ))}
+  const showPosts = posts.map(post => (
+    <div className="post">
+      <div className="topo">
+        <div className="usuario">
+          <img src={post.imagePerfil} />
+          {post.name}
+        </div>
+        <div className="acoes">
+          <ion-icon name="ellipsis-horizontal"></ion-icon>
+        </div>
       </div>
+  
+      <div className="conteudo" onClick={putFill}>
+        <img src={post.post} />
+      </div>
+  
+      <div className="fundo">
+        <div className="acoes">
+          <div>
+            <ion-icon name={fill} onClick={() => (putFill(this))}></ion-icon>
+            <ion-icon name="chatbubble-outline"></ion-icon>
+            <ion-icon name="paper-plane-outline"></ion-icon>
+          </div>
+          <div>
+            <ion-icon name="bookmark-outline"></ion-icon>
+          </div>
+        </div>
+  
+        <div className="curtidas">
+          <img src={post.perfilReacted} />
+          <div className="texto">
+            Curtido por <strong>{post.perfilReactedName}</strong> e <strong>outras {post.reactionsNumber} pessoas</strong>
+          </div>
+        </div>
+      </div>
+    </div>
+  ))
+
+  return(
+    <div className="posts">
+      {showPosts}
+    </div>
   )
 }
 

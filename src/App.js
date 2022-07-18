@@ -4,7 +4,7 @@ import Base from './Base';
 
 function App() {
     return (
-        <div class="banker">
+        <div className="banker">
             <Topo />
             <Content />
             <Base />

@@ -6,34 +6,34 @@ function IonIcon(props) {
 
 function Topo() {
     return(
-        <div class="navbar">
-        <div class="container">
-          <div class="logo">
+        <div className="navbar">
+        <div className="container">
+          <div className="logo">
             <IonIcon name="logo-instagram" />
-            <div class="separador"></div>
+            <div className="separador"></div>
             <img src="assets/img/logo.png" />
           </div>
 
-          <div class="logo-mobile">
+          <div className="logo-mobile">
             <IonIcon name="logo-instagram" />
           </div>
 
-          <div class="instagram-mobile">
+          <div className="instagram-mobile">
             <img src="assets/img/logo.png" />
           </div>
   
-          <div class="pesquisa">
+          <div className="pesquisa">
             <input type="text" placeholder="Pesquisar" />
           </div>
   
-          <div class="icones">
+          <div className="icones">
             <IonIcon name="paper-plane-outline" />
             <IonIcon name="compass-outline" />
             <IonIcon name="heart-outline" />
             <IonIcon name="person-outline" />
           </div>
 
-          <div class="icones-mobile">
+          <div className="icones-mobile">
             <IonIcon name="paper-plane-outline" />
           </div>
         </div>
