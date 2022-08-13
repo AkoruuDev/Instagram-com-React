@@ -9,11 +9,27 @@ const sugestoes = [
 function User(props) {
   return (
     <div className="usuario">
-      <img src={props.image} />
+      <img src={props.image} alt="user" />
       <div className="texto">
         <strong>{props.nick}</strong>
         {props.name}
       </div>
+    </div>
+  )
+}
+
+function Sugestao({ image, name}) {
+  return(
+    <div className="sugestao">
+      <div className="usuario">
+        <img src={image} alt="user" />
+        <div className="texto">
+          <div className="nome">{name}</div>
+          <div className="razao">Segue você</div>
+        </div>
+      </div>
+
+      <div className="seguir">Seguir</div>
     </div>
   )
 }
@@ -29,18 +45,8 @@ function Sidebar() {
             <div>Ver tudo</div>
           </div>
 
-          {sugestoes.map(sugestao => (
-            <div className="sugestao">
-              <div className="usuario">
-                <img src={sugestao.image} />
-                <div className="texto">
-                  <div className="nome">{sugestao.name}</div>
-                  <div className="razao">Segue você</div>
-                </div>
-              </div>
-
-              <div className="seguir">Seguir</div>
-            </div>
+          {sugestoes.map((sugestao, i) => (
+            <Sugestao key={i} image={sugestao.image} name={sugestao.name} />
           ))}
         </div>
 

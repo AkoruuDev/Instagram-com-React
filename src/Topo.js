@@ -11,7 +11,7 @@ function Topo() {
           <div className="logo">
             <IonIcon name="logo-instagram" />
             <div className="separador"></div>
-            <img src="assets/img/logo.png" />
+            <img src="assets/img/logo.png" alt="logo" />
           </div>
 
           <div className="logo-mobile">
@@ -19,7 +19,7 @@ function Topo() {
           </div>
 
           <div className="instagram-mobile">
-            <img src="assets/img/logo.png" />
+            <img src="assets/img/logo.png" alt="logo" />
           </div>
   
           <div className="pesquisa">

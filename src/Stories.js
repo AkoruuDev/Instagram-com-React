@@ -9,18 +9,28 @@ const storiesList = [
   {image: "assets/img/memeriagourmet.svg", user:"memeriagourmet"}
 ];
 
+function Storie({ image, user }) {
+  return(
+    <div className="story">
+      <div className="imagem">
+        <img src={image} alt="storie" />
+      </div>
+      <div className="usuario">
+        {user}
+      </div>
+    </div>
+  )
+}
+
 function Stories() {
     return(
       <div className="stories">
-        {storiesList.map((storie) => (
-          <div className="story">
-            <div className="imagem">
-              <img src={storie.image} />
-            </div>
-            <div className="usuario">
-              {storie.user}
-            </div>
-          </div>
+        {storiesList.map((storie, i) => (
+          <Storie
+            key={i}
+            image={storie.image}
+            user={storie.user}
+          />
         ))}
 
         <div className="setinha">

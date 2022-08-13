@@ -19,9 +19,8 @@ const posts = [
   }
 ]
 
-function Posts() {
+function Post({ imagePerfil, name, post, perfilReacted, perfilReactedName, reactionsNumber }) {
   const [fill, setFill] = React.useState("heart-outline");
-  const refer = React.useRef()
 
   function putFill(element) {
     if (fill === "heart-outline") {
@@ -30,13 +29,13 @@ function Posts() {
       setFill("heart-outline")
     }
   }
-
-  const showPosts = posts.map(post => (
+  
+  return(
     <div className="post">
       <div className="topo">
         <div className="usuario">
-          <img src={post.imagePerfil} />
-          {post.name}
+          <img src={imagePerfil} alt="user" />
+          {name}
         </div>
         <div className="acoes">
           <ion-icon name="ellipsis-horizontal"></ion-icon>
@@ -44,7 +43,7 @@ function Posts() {
       </div>
   
       <div className="conteudo" onClick={putFill}>
-        <img src={post.post} />
+        <img src={post} alt="post" />
       </div>
   
       <div className="fundo">
@@ -60,13 +59,27 @@ function Posts() {
         </div>
   
         <div className="curtidas">
-          <img src={post.perfilReacted} />
+          <img src={perfilReacted} alt="perfilReacted" />
           <div className="texto">
-            Curtido por <strong>{post.perfilReactedName}</strong> e <strong>outras {post.reactionsNumber} pessoas</strong>
+            Curtido por <strong>{perfilReactedName}</strong> e <strong>outras {reactionsNumber} pessoas</strong>
           </div>
         </div>
       </div>
     </div>
+  )
+}
+
+function Posts() {
+  const showPosts = posts.map((post, i) => (
+    <Post
+      key={i}
+      imagePerfil={post.imagePerfil}
+      name={post.name}
+      post={post.post}
+      perfilReacted={post.perfilReacted}
+      perfilReactedName={post.perfilReactedName}
+      reactionsNumber={post.reactionsNumber}
+    />
   ))
 
   return(
