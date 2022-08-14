@@ -1,5 +1,5 @@
 import Stories from './Stories';
-import Posts from './Posts';
+import Posts from './Posts/Posts';
 import Sidebar from './Sidebar';
 
 function Content() {
