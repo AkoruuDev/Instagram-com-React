@@ -213,6 +213,10 @@ body, .banker, .root {
     margin-bottom: 18px;
 }
 
+.heart {
+    color: rgb(245, 0, 0);
+}
+
 .sidebar {
     padding-top: 24px;
     position: sticky;

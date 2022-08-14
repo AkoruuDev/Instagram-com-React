@@ -3,7 +3,7 @@ import React from 'react'
 export default function Post({ imagePerfil, name, post, perfilReacted, perfilReactedName, reactionsNumber }) {
   const [fill, setFill] = React.useState("heart-outline");
 
-  function putFill(element) {
+  function putFill() {
     if (fill === "heart-outline") {
       setFill("heart")
     } else {
@@ -30,7 +30,7 @@ export default function Post({ imagePerfil, name, post, perfilReacted, perfilRea
       <div className="fundo">
         <div className="acoes">
           <div>
-            <ion-icon name={fill} onClick={() => (putFill(this))}></ion-icon>
+            <span className={fill}><ion-icon name={fill} onClick={() => (putFill())}></ion-icon></span>
             <ion-icon name="chatbubble-outline"></ion-icon>
             <ion-icon name="paper-plane-outline"></ion-icon>
           </div>
