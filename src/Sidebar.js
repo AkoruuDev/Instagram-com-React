@@ -1,3 +1,5 @@
+import { useState } from "react"
+
 const sugestoes = [
   {image: "assets/img/bad.vibes.memes.svg", name: "bad.vibes.memes"},
   {image: "assets/img/chibirdart.svg", name: "chibirdart"},
@@ -19,6 +21,16 @@ function User(props) {
 }
 
 function Sugestao({ image, name}) {
+  const [follow, setFollow] = useState("Seguir");
+
+  function toFollow() {
+    if (follow === "Seguir") {
+      setFollow("Seguindo");
+    } else {
+      setFollow("Seguir")
+    }
+  }
+
   return(
     <div className="sugestao">
       <div className="usuario">
@@ -29,7 +41,7 @@ function Sugestao({ image, name}) {
         </div>
       </div>
 
-      <div className="seguir">Seguir</div>
+      <div className={follow} onClick={toFollow}>{follow}</div>
     </div>
   )
 }

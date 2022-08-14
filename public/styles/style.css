@@ -272,8 +272,13 @@ body, .banker, .root {
     height: 32px;
 }
 
-.sidebar .sugestoes .seguir {
+.sidebar .sugestoes .Seguir {
     color: #139EF2;
+    font-weight: 600;
+}
+
+.sidebar .sugestoes .Seguindo {
+    color: #262626;
     font-weight: 600;
 }
 
