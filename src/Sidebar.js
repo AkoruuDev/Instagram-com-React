@@ -9,13 +9,19 @@ const sugestoes = [
 ]
 
 function User(props) {
+  let [nick, setNick] = useState('catanacomics');
+  let [myuser, setMyuser] = useState('Catana');
+
   return (
-    <div className="usuario">
-      <img src={props.image} alt="user" />
-      <div className="texto">
-        <strong>{props.nick}</strong>
-        {props.name}
+    <div class='user-box'>
+      <div className="usuario">
+        <img src={props.image} alt="user" />
+        <div className="texto">
+          <strong>{nick}</strong>
+          {myuser}
+        </div>
       </div>
+      <ion-icon name="pencil-sharp"></ion-icon>
     </div>
   )
 }
@@ -49,7 +55,7 @@ function Sugestao({ image, name}) {
 function Sidebar() {
     return(
       <div className="sidebar">
-        <User image="assets/img/catanacomics.svg" nick="catanacomics" name="Catana"/>
+        <User image="assets/img/catanacomics.svg"/>
 
         <div className="sugestoes">
           <div className="titulo">
