@@ -27,7 +27,7 @@ body, .banker, .root {
     z-index: 2;
 }
 
-.navbar ion-icon, .navbar img {
+ion-icon {
     cursor: pointer;
 }
 
@@ -324,4 +324,68 @@ body, .banker, .root {
 
 .logo-mobile, .instagram-mobile {
     display: none !important;
+}
+
+.user-edit-box {
+    width: 500px;
+    height: 300px;
+    background-color: white;
+    border-radius: 28px;
+    box-shadow: 0 4px 10px 4px grey;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    position: fixed;
+    top: calc(50% - 150px);
+    left: calc(50% - 250px);
+}
+
+.edit-title-box {
+    font-size: 22px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.edit-title {
+    font-size: 18px;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.edit-input {
+    width: 400px;
+    height: 40px;
+    border-radius: 8px;
+    border-bottom: none;
+    box-sizing: border-box;
+    border: 1px gray solid;
+    margin: 10px 0 18px 0;
+    padding: 8px;
+    font-style: italic;
+    font-weight: bold;
+}
+
+.button {
+    width: 200px;
+    height: 50px;
+    background-image: linear-gradient(to right, #666262, gray, rgb(168, 155, 155));
+    border-radius: 30px;
+
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 1s;
+}
+
+.button:hover {
+    cursor: pointer;
+    background-image: linear-gradient(to right, #FCAF45 , #C13584, #405DE6);
 }

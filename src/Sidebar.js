@@ -1,4 +1,5 @@
 import { useState } from "react"
+import UserEdit from "./services/user-edit";
 
 const sugestoes = [
   {image: "assets/img/bad.vibes.memes.svg", name: "bad.vibes.memes"},
@@ -11,9 +12,10 @@ const sugestoes = [
 function User(props) {
   let [nick, setNick] = useState('catanacomics');
   let [myuser, setMyuser] = useState('Catana');
+  let [showEdit, setShowEdit] = useState(false); //Olha aqui moço ------
 
   return (
-    <div class='user-box'>
+    <div className='user-box'>
       <div className="usuario">
         <img src={props.image} alt="user" />
         <div className="texto">
@@ -21,7 +23,16 @@ function User(props) {
           {myuser}
         </div>
       </div>
-      <ion-icon name="pencil-sharp"></ion-icon>
+      <div onClick={() => setShowEdit(true)}>
+        <ion-icon name="pencil-sharp"></ion-icon>
+      </div>
+      {showEdit ? <UserEdit
+        setNick={setNick}
+        nick={nick}
+        setMyuser={setMyuser}
+        myuser={myuser}
+        setShowEdit={setShowEdit}
+      /> : ""}
     </div>
   )
 }
