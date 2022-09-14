@@ -11,8 +11,12 @@ export default function UserEdit({setNick, nick, setMyuser, myuser, setShowEdit}
             <div className="buttons">
                 <div className="button" onClick={() => {
                     setShowEdit(false);
-                    setMyuser(nickname);
-                    setNick(username);
+                    if (username !== "") {
+                        setMyuser(username);
+                    }
+                    if (nickname !== "") {
+                        setNick(nickname);
+                    }
                 }}>Salvar</div>
                 <div className="button" onClick={() => setShowEdit(false)}>Cancelar</div>
             </div>

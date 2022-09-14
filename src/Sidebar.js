@@ -19,8 +19,8 @@ function User(props) {
       <div className="usuario">
         <img src={props.image} alt="user" />
         <div className="texto">
-          <strong>{nick}</strong>
-          {myuser}
+          <strong>{myuser}</strong>
+          {nick}
         </div>
       </div>
       <div onClick={() => setShowEdit(true)}>
