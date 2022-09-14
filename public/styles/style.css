@@ -369,8 +369,14 @@ ion-icon {
     font-weight: bold;
 }
 
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    width: 400px;
+}
+
 .button {
-    width: 200px;
+    width: 150px;
     height: 50px;
     background-image: linear-gradient(to right, #666262, gray, rgb(168, 155, 155));
     border-radius: 30px;
