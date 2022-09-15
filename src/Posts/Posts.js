@@ -7,7 +7,7 @@ const posts = [
     post: "assets/img/gato-telefone.svg",
     perfilReacted: "assets/img/respondeai.svg",
     perfilReactedName: "respondeai",
-    reactionsNumber: "101.523"
+    reactionsNumber: "101523"
   },
   {
     imagePerfil: "assets/img/barked.svg",
@@ -15,7 +15,7 @@ const posts = [
     post: "assets/img/dog.svg",
     perfilReacted: "assets/img/adorable_animals.svg",
     perfilReactedName: "adorable_animals",
-    reactionsNumber: "99.159"
+    reactionsNumber: "99159"
   }
 ]
 

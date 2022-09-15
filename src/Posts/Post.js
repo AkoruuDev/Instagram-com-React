@@ -42,7 +42,7 @@ export default function Post({ imagePerfil, name, post, perfilReacted, perfilRea
             <div className="curtidas">
             <img src={perfilReacted} alt="perfilReacted" />
             <div className="texto">
-                Curtido por <strong>{perfilReactedName}</strong> e <strong>outras {reactionsNumber} pessoas</strong>
+                Curtido por <strong>{perfilReactedName}</strong> e <strong>outras {fill === 'heart' ? (Number(reactionsNumber) + 1).toLocaleString('pt-BR') : Number(reactionsNumber).toLocaleString('pt-BR')} pessoas</strong>
             </div>
             </div>
         </div>
