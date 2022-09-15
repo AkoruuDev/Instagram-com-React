@@ -10,14 +10,15 @@ const sugestoes = [
 ]
 
 function User(props) {
-  let [nick, setNick] = useState('catanacomics');
-  let [myuser, setMyuser] = useState('Catana');
-  let [showEdit, setShowEdit] = useState(false); //Olha aqui moço ------
+  const [nick, setNick] = useState('catanacomics');
+  const [myuser, setMyuser] = useState('Catana');
+  const [image, setImage] = useState("assets/img/catanacomics.svg")
+  const [showEdit, setShowEdit] = useState(false); //Olha aqui moço ------
 
   return (
     <div className='user-box'>
       <div className="usuario">
-        <img src={props.image} alt="user" />
+        <img src={image} alt="user" />
         <div className="texto">
           <strong>{myuser}</strong>
           {nick}
@@ -28,9 +29,8 @@ function User(props) {
       </div>
       {showEdit ? <UserEdit
         setNick={setNick}
-        nick={nick}
         setMyuser={setMyuser}
-        myuser={myuser}
+        setImage={setImage}
         setShowEdit={setShowEdit}
       /> : ""}
     </div>
@@ -66,7 +66,7 @@ function Sugestao({ image, name}) {
 function Sidebar() {
     return(
       <div className="sidebar">
-        <User image="assets/img/catanacomics.svg"/>
+        <User />
 
         <div className="sugestoes">
           <div className="titulo">

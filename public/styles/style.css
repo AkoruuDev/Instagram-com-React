@@ -328,7 +328,7 @@ ion-icon {
 
 .user-edit-box {
     width: 500px;
-    height: 300px;
+    height: 500px;
     background-color: white;
     border-radius: 28px;
     box-shadow: 0 4px 10px 4px grey;
@@ -339,7 +339,7 @@ ion-icon {
     justify-content: center;
 
     position: fixed;
-    top: calc(50% - 150px);
+    top: calc(50% - 250px);
     left: calc(50% - 250px);
 }
 
